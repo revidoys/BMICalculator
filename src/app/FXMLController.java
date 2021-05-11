@@ -41,20 +41,19 @@ public class FXMLController implements Initializable {
        double tinggiBadan = Double.parseDouble(tinggiBadanTextField.getText());
        double beratBadan = Double.parseDouble(beratBadanTextField.getText());
        tinggiBadan = tinggiBadan / 100;
-       double bmi = Double.parseDouble(nilaiBodyMassIndexTextField.getText());
        
-       bmi = beratBadan / tinggiBadan * tinggiBadan;
+       double bmi = beratBadan / tinggiBadan * tinggiBadan;
        
        String kondisi;
-        if (bmi < 18.5) {
+       if (bmi < 18.5) {
             kondisi = "Underweight"; 
-        }else if (bmi >= 18.5 && bmi <= 24.9) {
+       }else if (bmi >= 18.5 && bmi < 25) {
             kondisi = "Normal";
-        }else if (bmi >= 25 && bmi <= 29.9){
+       }else if (bmi >= 25 && bmi <= 29.9){
             kondisi = "Overweight";
-        }else {
+       }else {
             kondisi = "Obese";
-        }
+       }
     
        nilaiBodyMassIndexTextField.setText(Double.toString(bmi));
        kondisiTextField.setText(kondisi);

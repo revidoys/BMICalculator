@@ -14,7 +14,7 @@ public class Main extends Application{
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("FXML.fxml"));
         
-        stage.setTitle("BMI Caclculator");
+        stage.setTitle("BMI Calculator");
         stage.setScene(new Scene(root));
         stage.show();
     }
